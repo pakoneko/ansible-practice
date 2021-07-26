@@ -3,8 +3,8 @@
 - name: install epel
   yum: name=epel-release state=installed
 
-- name: disable selinux
-  selinux: state={{ selinux_mode }}
+#- name: disable selinux
+#  selinux: state={{ selinux_mode }}
 
 - name: set timezone
   command: timedatectl set-timezone {{ timezone }}
