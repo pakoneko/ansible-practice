@@ -9,4 +9,4 @@ nginx_user:
   gid: 2000
 
 nginx_config_dir: "/etc/nginx/conf.d"
-nginx_documentroot: "/var/html"
+nginx_documentroot: "/usr/share/nginx/html"
