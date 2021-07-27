@@ -2,4 +2,8 @@
 # tasks file for ruby
 - name: install ruby
   yum: name=ruby-{{ ruby_version }} state=installed
+  when: ansible_facts['os_family'] is defined and ansible_facts['os_family'] == "RedHat"
 
+- name: install ruby in ubuntu
+  apt: name=ruby-{{ ruby_version }} state=installed
+  when: ansible_facts['os_family'] is defined and ansible_facts['os_family'] == "Debian"
